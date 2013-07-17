@@ -36,7 +36,7 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Peru'
+TIME_ZONE = 'America/Lima'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -79,6 +79,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    path.join(PROJECT_PATH, 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -128,8 +129,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap_admin',
+    #'django_admin_bootstrapped',
     # admin
     'django.contrib.admin',
+    'restaurant',
 )
 
 # A sample logging configuration. The only tangible logging
